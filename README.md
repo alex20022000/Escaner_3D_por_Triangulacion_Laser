@@ -475,63 +475,63 @@ La cabina donde se encuentra el escáner, se diseñó con el mismo software y se
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/1.Vista_explosionada.png" alt="Vista explosionada">
+    <img width="80%" src="Recursos/Planos/1.Vista_explosionada.png" alt="Vista explosionada">
     <figcaption>Vista explosionada</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/2.Vista general.png" alt="Vista general">
+    <img width="80%" src="Recursos/Planos/2.Vista general.png" alt="Vista general">
     <figcaption>Vista general</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/3.Marco camara.png" alt="Marco camara">
+    <img width="80%" src="Recursos/Planos/3.Marco camara.png" alt="Marco camara">
     <figcaption>Marco cámara</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/4.Marco laser.png" alt="Marco laser">
+    <img width="80%" src="Recursos/Planos/4.Marco laser.png" alt="Marco laser">
     <figcaption>Marco láser</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/5.Soporte marco camara.png" alt="Soporte marco camara">
+    <img width="80%" src="Recursos/Planos/5.Soporte marco camara.png" alt="Soporte marco camara">
     <figcaption>Soporte marco cámara</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/6.Union bases.png" alt="Union bases">
+    <img width="80%" src="Recursos/Planos/6.Union bases.png" alt="Union bases">
     <figcaption>Unión bases</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/7.Base soporte motor.png" alt="Base soporte motor">
+    <img width="80%" src="Recursos/Planos/7.Base soporte motor.png" alt="Base soporte motor">
     <figcaption>Base soporte motor</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/8.Soporte motor.png" alt="Soporte motor">
+    <img width="80%" src="Recursos/Planos/8.Soporte motor.png" alt="Soporte motor">
     <figcaption>Soporte motor</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos/Planos/10.Marco led.png" alt="Marco led">
+    <img width="80%" src="Recursos/Planos/10.Marco led.png" alt="Marco led">
     <figcaption>Marco LED</figcaption>
 </figure>
 <br>
@@ -540,26 +540,26 @@ La cabina donde se encuentra el escáner, se diseñó con el mismo software y se
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos\Planos\11.Caja.png" alt="Cabina">
+    <img width="80%" src="Recursos\Planos\11.Caja.png" alt="Cabina">
     <figcaption>Cabina</figcaption>
 </figure>
 <br>
 
 <br>
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos\Planos\12.Laterales caja.png" alt="Laterales">
+    <img width="80%" src="Recursos\Planos\12.Laterales caja.png" alt="Laterales">
     <figcaption>Laterales de la cabina</figcaption>
 </figure>
 <br>
 
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos\Planos\13.Angulos internos y externos.png" alt="Angulos Int y Ext">
+    <img width="80%" src="Recursos\Planos\13.Angulos internos y externos.png" alt="Angulos Int y Ext">
     <figcaption>Angulos internos y externos</figcaption>
 </figure>
 <br>
 
 <figure style="text-align:center;">
-    <img width="95%" src="Recursos\Planos\14.Esquineros y apoyos.png" alt="Esquineros y apoyos">
+    <img width="80%" src="Recursos\Planos\14.Esquineros y apoyos.png" alt="Esquineros y apoyos">
     <figcaption>Esquineros y apoyos</figcaption>
 </figure>
 <br>
