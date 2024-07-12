@@ -96,26 +96,15 @@ $p_x = \text{posición del píxel en la horizontal}$
 $p_y = \text{posición del píxel en la vertical}$
 
 
-Por último, se aplica la rotación:
-$$
-\begin{bmatrix}
-    x_i \\
-    y_i \\
-    z_i
-\end{bmatrix}
-=
-\begin{bmatrix}
-    \cos(\theta) & -\sin(\theta) & 0 \\
-    \sin(\theta) & \cos(\theta) & 0 \\
-    0 & 0 & 1
-\end{bmatrix}
-\begin{bmatrix}
-    x_0 \\
-    y_0 \\
-    z_0
-\end{bmatrix}
-$$
+Por último, se aplica la rotación:  
 
+$(x_i, y_i, z_i) = 
+[
+  [ cos(θ), -sin(θ), 0 ],
+  [ sin(θ), cos(θ), 0 ],
+  [ 0, 0, 1 ]
+]
+(x_0, y_0, z_0)$
 
 
 <a id="item-tres"></a>
