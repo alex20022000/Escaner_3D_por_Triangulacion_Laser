@@ -25,20 +25,21 @@
 
 ## Problema a Resolver:
 
-Dentro del ámbito del diseño en 3D, muchas veces nos topamos con piezas que poseen geometrías muy complejas, las cuáles son muy difíciles de replicar en un modelo 3D. Generalmente son piezas que una vez que se fabricaron, no se expone al público el plano contructivo de la misma.
-Es por ello que, es necesario, para poder obtener una representacion digital fiel al objeto físico, recurrir a distintas técnicas que nos permitan obtener dicha representacion digital.
+En el ámbito del diseño en 3D, a menudo nos encontramos con piezas de geometrías muy complejas, difíciles de replicar en un modelo 3D. Generalmente, estas piezas, una vez fabricadas, no cuentan con un plano constructivo disponible al público.
+
+Por ello, es necesario recurrir a diversas técnicas para obtener una representación digital fiel al objeto físico.
 
 <a id="item-dos"></a>
 
 ## Descripción:
 
-El presente proyecto, consta de una cabina, en la cual, dentro se encuentra una base giratoria. Encima de la base se debe depositar el objeto a escanear. Dentro de la cabina también se puede apreciar una estructura que contiene la cámara, el láser y un soporte con leds y un difusor para evitar reflejos por la intensidad de la luz.  
-Luego, a través de la interfaz gráfica, se podrá manipular el hardware del escáner y visualizar la métricas del proceso de escaneo en tiempo real.
-Una vez finalizado el escaneo se obtendrá un archivo .ply el cual corresponde a una nube de puntos. Dichos puntos, pueden conservar su color característico correspondiente al objeto real o no, dependiendo de la secuencia seleccionada en la GUI(interfaz de usuario).
+El presente proyecto consiste en una cabina que contiene una base giratoria sobre la cual se deposita el objeto a escanear. Dentro de la cabina también se encuentra una estructura que sostiene la cámara, el láser y un soporte con LEDs y un difusor para evitar reflejos por la intensidad de la luz.
+
+A través de la interfaz gráfica, se puede manipular el hardware del escáner y visualizar las métricas del proceso de escaneo en tiempo real. Una vez finalizado el escaneo, se generará un archivo .ply que contiene una nube de puntos. Estos puntos pueden conservar su color característico del objeto real o no, dependiendo de la secuencia seleccionada en la GUI (interfaz de usuario).
 
 ### Proceso de escaneo
 
-Una vez iniciado el proceso, se captura una imagen del objeto a oscuras, únicamente con el haz láser proyectado sobre el mismo. En el caso se que se haya seleccionado la secuencia de color, adicionalmente, se encenderá el led para iluminar la pieza y capturar la informacion del valor de color en los píxeles.
+Una vez iniciado el proceso, se captura una imagen del objeto a oscuras, únicamente con el haz láser proyectado sobre él. Si se ha seleccionado la secuencia de color, se encenderá el LED para iluminar la pieza y capturar la información del valor de color en los píxeles.
 
 <table>
   <tr>
@@ -51,13 +52,13 @@ Una vez iniciado el proceso, se captura una imagen del objeto a oscuras, únicam
   </tr>
 </table>
 
-Luego, la base del escáner, rotará un ángulo determinado por la resolución angular seleccionada en la GUI (dicha selección, modifica la configuración de microstepping activando los pines del driver que corresponden a la resolución angular propuesta). Nuevamente se realiza el porceso de captura, rotación, captura, rotación, hasta completar los 360° y haber capturado información de un giro completo del objeto.
+Luego, la base del escáner rotará un ángulo determinado por la resolución angular seleccionada en la GUI. Esta selección modifica la configuración de microstepping al activar los pines del driver correspondientes a la resolución propuesta. Se repetirá el proceso de captura y rotación hasta completar los 360° y haber obtenido información de un giro completo del objeto.
 
 ### Procesameinto de Imágenes
 
-Suponiendo que las condiciones de escaneo permiten obtener una imagen totalmente oscura donde sólo se visualiza la línea generada sobre la pieza por el impacto del láser (y que la pieza solo refleja la línea), se deberá identificar los pixeles en color “rojo” (dentro de un rango establecido) y aislar los demás píxeles, ya que no aportan información sobre la pieza escaneada.
-Para identificar los puntos válidos, se utilizó una técnica de umbralización acotada dentro de la gama de color definida por los parametros HSV.
-Esto nos permite que, para cada imagen obtenida con el láser encendido, será procesada y se obtendrá un mapa de “unos y ceros”, siendo los píxeles en uno los que son válidos para triangular y ceros los que no aportan información.</br>
+Suponiendo que las condiciones de escaneo permiten obtener una imagen completamente oscura, donde solo se visualiza la línea generada sobre la pieza por el impacto del láser (y que la pieza refleja únicamente esa línea), es necesario identificar los píxeles en color "rojo" (dentro de un rango establecido) y aislar los demás píxeles, ya que no aportan información sobre la pieza escaneada.
+
+Para identificar los puntos válidos, se utiliza una técnica de umbralización acotada dentro de la gama de color definida por los parámetros HSV. Esto permite que, para cada imagen obtenida con el láser encendido, se procese y se genere un mapa de "unos y ceros", donde los píxeles marcados como uno son válidos para la triangulación y los ceros son aquellos que no aportan información.</br>
 
 #### Ejemplo:
 
@@ -115,8 +116,9 @@ $(x_i, y_i, z_i) =
 
 ## Especificación de Requerimientos:
 
-La utilidad del escáner apunta a diseñadores industriales, ingenieros, hobbistas o a la comunidad maker. Está pensado para simplemente acompañado de una conexión con una PC pueda ser utilizado.
-Las pruebas realizadas demuestran que el tiempo de escaneo será variable dependiendo de la resolución seleccionada y de la secuencia de escaneo deseada:
+La utilidad del escáner está orientada a diseñadores industriales, ingenieros, hobbistas y a la comunidad maker. Está diseñado para ser utilizado de manera sencilla, acompañado de una conexión a una PC.
+
+Las pruebas realizadas demuestran que el tiempo de escaneo variará dependiendo de la resolución seleccionada y de la secuencia de escaneo elegida:
 
 | Resolución Angular | Tiempo de Escaneo (Secuencia 1 con color) | Total Imágenes (Secuencia 1 con color) | Tiempo de Escaneo (Secuencia 2 sin color) | Total Imágenes (Secuencia 2 sin color) |
 | :----------------: | :---------------------------------------: | :------------------------------------: | :---------------------------------------: | :------------------------------------: |
@@ -127,9 +129,6 @@ Las pruebas realizadas demuestran que el tiempo de escaneo será variable depend
 |      0.1125°       |                 01:57:26                  |                  6400                  |                 01:25:00                  |                  3200                  |
 |      0.05625°      |                 03:54:52                  |                 12800                  |                 02:50:00                  |                  6400                  |
 
-<p align="center" width="100%">
-    <img width="45%" src="">
-</p>
 
 <a id="item-cuatro"></a>
 
@@ -164,8 +163,7 @@ _Aclaración: El precio en ARS es el precio estimado al tipo de cambio en el mom
 
 ## Circuito Electrónico:
 
-Para la conexión del circuito electrónico se decidió comprar una placa perforada, ya que mandar a fabricar un PCB a medida requiería tiempos de entrega con los que no se contaban.
-A continuacion se ilustra el modelado 3D del circuito:
+Para la conexión del circuito electrónico, se decidió adquirir una placa perforada, ya que la fabricación de un PCB a medida requería tiempos de entrega que no se podían gestionar. A continuación, se ilustra el modelado 3D del circuito:
 
 #### Plaqueta vista isométrica
 
@@ -195,7 +193,7 @@ A continuacion se ilustra el modelado 3D del circuito:
 
 ## Programación:
 
-El proceso lógico que sigue el escáner consta de dos divisiones, una es la programación del Arduino que será el "ejecutor" y encargado de interactuar con el hardware (mover el motor, encender y apagar LEDs, encender y apagar láser, etc.) y la segunda rama es la encargada de capturar las imágenes, realizar el procesamiento de las mismas, y guardar los archivos en la PC o Notebook:
+El proceso lógico que sigue el escáner se divide en dos partes: la programación del Arduino, que actúa como "ejecutor" y se encarga de interactuar con el hardware (mover el motor, encender y apagar LEDs, activar y desactivar el láser, etc.), y la segunda parte, que se ocupa de capturar las imágenes, realizar su procesamiento y guardar los archivos en la PC o notebook:
 
 <br>
 <p align="center" width="100%">
@@ -218,9 +216,9 @@ Parámetros que recibe:
 
 ### Camera_Calibration.py
 
-El script calibra la cámara utilizando una tabla de ajedrez de prueba, lo que permite corregir distorsiones y obtener parámetros precisos de la cámara.
-Las cámaras suelen introducir distorsiones en las imágenes capturadas, es por ello que es necesario corregir la distorsión para que las medidas se asemejen a la realidad.
-Basándose en la detección de esquinas de los tableros de ajedrez precargados, el script nos permite obtener los parámetros intrínsecos y extrínsecos de la cámara, obteniendo así, la matriz de la cámara, los coeficientes de distorsión, y los vectores de rotación y traslación.
+El script calibra la cámara utilizando una tabla de ajedrez de prueba, lo que permite corregir distorsiones y obtener parámetros precisos de la misma. Las cámaras suelen introducir distorsiones en las imágenes capturadas, por lo que es necesario realizar esta corrección para que las medidas se asemejen a la realidad.
+
+Basándose en la detección de las esquinas de los tableros de ajedrez precargados, el script permite obtener los parámetros intrínsecos y extrínsecos de la cámara, generando así la matriz de la cámara, los coeficientes de distorsión y los vectores de rotación y traslación.
 
 ### Scanner.py
 
