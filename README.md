@@ -170,7 +170,7 @@ A continuacion se ilustra el modelado 3D del circuito:
 #### Plaqueta vista isométrica
 
 <br>
-<p align="center" width="100%">
+<p align="center" width="80%">
     <img src = "Recursos\Imágenes\Circuito_Electrónico\CircuitoFísicoIsométrico.png" width="95%">
 </p>
 <br>
@@ -178,7 +178,7 @@ A continuacion se ilustra el modelado 3D del circuito:
 #### Plaqueta vista superior
 
 <br>
-<p align="center" width="100%">
+<p align="center" width="80%">
     <img src = "Recursos\Imágenes\Circuito_Electrónico\CircuitoFísicoVistaSup.png" width="95%">
 </p>
 <br>
@@ -186,7 +186,7 @@ A continuacion se ilustra el modelado 3D del circuito:
 #### Conexión eléctrica
 
 <br>
-<p align="center" width="100%">
+<p align="center" width="80%">
     <img src = "Recursos\Imágenes\Circuito_Electrónico\Circuito_Escáner_KiCad.png" width="95%">
 </p>
 <br>
